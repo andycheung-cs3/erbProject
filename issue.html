@@ -93,13 +93,14 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 43%);
     <section class="contact py-5 my-5" id="contact">
         <div class="container ">
             <div class="section_title text-center mb-5">
-                <h1 class="text-capitalize" style="text-decoration:none">Contact Us</h1>
+                <h1 class="text-capitalize" style="text-decoration:none">Report a Payment Issue</h1>
             </div>
-            <div class="row mb-5">
+            <!--contact start-->
+            <!-- <div class="row mb-5">
                 <div class="col-md-4 col-12 mt-small-5 mb-small-5">
                     <div class="border border-success rounded text-center p-3" style="border: 2.5px solid rgb(95, 95, 240)!important; border-radius: 0.5rem!important; background-color: #E0C3FC; box-shadow: 10px 10px 15px 0.5px #bf94e7;">
                         <div class="mb-4">
-                            <!-- background-image: linear-gradient( 135deg, #FFF3B0 10%, #CA26FF 100%); -->
+                            
                             <i class="fas fa-phone-alt fa-3x"></i>
                         </div>
                         <div>
@@ -130,7 +131,8 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 43%);
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <!--contact end-->
             <div class="row">
                 <div class="col-md-8 col-10 mx-auto mb-3 my-5 py-5 border " style="box-shadow: 0px 0px 25px 5px #bf94e7; border-radius: 0.5rem;">
                     <h3 class="text-center mb-3">Form</h3>
@@ -145,8 +147,20 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 43%);
                             <input name="email" id="email" type="email" placeholder="Email" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>Message</label>
-                            <textarea name="msg" id="msg" class="form-control" placeholder="Message"></textarea>
+                            <label>Order number</label>
+                            <input type="text" id="aOrderNumber" name="aOrderNumber" placeholder="Enter your order number" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Date of purchase</label>
+                            <input type="date" id="aPurchaseDate" name="aPurchaseDate" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Amout paid</label>
+                            <input type="number" id="aAmoutPaid" name="aAmoutPaid" placeholder="Enter amount" step="0.01" min="0" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Issue</label>
+                            <textarea name="msg" id="msg" class="form-control" placeholder="Issue"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Submit</button>
                     </form>
@@ -274,7 +288,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 43%);
             var isValidForm = false;
         } 
         else if (msg.length < 1) {
-            alert("Message is Required!");
+            alert("Issue is Required!");
             var isValidForm = false;
         }
         else
